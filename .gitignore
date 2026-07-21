@@ -1,15 +1,40 @@
 # Logs y archivos temporales
 *.log
 *.tmp
+*.bak
+*.swp
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Variables de entorno y secretos
+# Variables de entorno, llaves y secretos
 .env
-.env.local
+.env.*
+!.env.example
 *.pem
 *.key
+id_rsa*
+id_ed25519*
+*.pfx
+*.p12
+*.crt
 
-# Directorios de construccion o cache
+# Archivos de entorno de desarrollo y cachés de IDE
+.vscode/
+.idea/
+.vs/
+*.suo
+*.user
+
+# Cachés de lenguajes y construcciones
 __pycache__/
 *.pyc
+node_modules/
+dist/
+build/
+.cache/
+
+# Bases de datos locales
+*.sqlite
+*.db
+
