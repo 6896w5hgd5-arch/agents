@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respuesta eficiente"
+  short_description: "Reduce tokens sin perder precision, seguridad ni verificaciones"
+  default_prompt: "Aplica respuesta eficiente a esta tarea:"

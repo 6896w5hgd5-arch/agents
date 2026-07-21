@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edicion academica natural"
+  short_description: "Audita papers, citas y bibliografias sin inventar fuentes"
+  default_prompt: "Usa $edicion-academica-natural para auditar este manuscrito completo: estructura, citas, bibliografia, metodo y redaccion."

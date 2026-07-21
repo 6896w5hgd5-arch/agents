@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seguridad por diseno"
+  short_description: "Evalua riesgos tecnicos y legales antes de actuar"
+  default_prompt: "Usa $seguridad-por-diseno para evaluar riesgos, controles y la decision segura de este cambio."

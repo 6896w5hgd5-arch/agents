@@ -1,0 +1,4 @@
+interface:
+  display_name: "Consejo de seis perspectivas"
+  short_description: "Evalua decisiones con seis perspectivas y un auditor cientifico"
+  default_prompt: "Usa el consejo de seis perspectivas para analizar esta decision: $ARGUMENTS"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auditoria de documentos APA 7"
+  short_description: "Examina y corrige documentos según APA 7"
+  default_prompt: "Usa $apa-7-documento para auditar y corregir este documento según APA 7 sin inventar citas ni metadatos."

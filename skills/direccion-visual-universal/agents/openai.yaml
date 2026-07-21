@@ -1,0 +1,4 @@
+interface:
+  display_name: "Direccion visual universal"
+  short_description: "Define sistemas visuales coherentes para cualquier proyecto"
+  default_prompt: "Usa $direccion-visual-universal para definir y aplicar un sistema visual coherente a este proyecto."
