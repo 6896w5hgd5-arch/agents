@@ -6,10 +6,10 @@ description: Elimina marcas, clichés, estructuras repetitivas y cadencias mecá
 # Humanizer
 
 ## Propósito
-Reescribir y refinar textos para eliminar patrones léxicos, sintácticos y estilísticos característicos de los modelos de lenguaje (LLMs), adaptando la redacción a una voz natural, auténtica y fluida sin alterar los datos ni la intención original del autor.
+Reescribir y refinar textos para eliminar patrones léxicos, sintácticos y estilísticos característicos de los modelos de lenguaje (LLMs), adaptando la redacción a una voz natural, auténtica y fluida sin alterar los datos ni la intención original del autor. Especialmente optimizada para elevar la calidad de **papers científicos** a un 95% de naturalidad humana, permitiendo superar detectores profesionales de IA y anti-plagio.
 
 ## Problema que resuelve
-Elimina palabras sobreutilizadas por IA ("crucial", "tapiz", "delve", "cabe destacar"), estructuras de oraciones monótonas y predecibles, listas forzadas de tres elementos y conclusiones mecánicas sin valor argumental.
+Elimina palabras sobreutilizadas por IA ("crucial", "tapiz", "delve", "cabe destacar"), estructuras de oraciones monótonas y predecibles, listas forzadas de tres elementos, conclusiones mecánicas sin valor argumental, **calcos sintácticos** (traducciones literales o estructuras forzadas) y el **falso entusiasmo** (adjetivación excesiva o tono promocional innecesario).
 
 ## Cuándo utilizarla
 - Cuando el usuario pide "humanizar" un borrador, correo, artículo, publicación de blog o guion generado o asistido por IA.
@@ -23,7 +23,9 @@ Elimina palabras sobreutilizadas por IA ("crucial", "tapiz", "delve", "cabe dest
 
 ## Entradas
 - **Obligatorias**: Texto borrador a humanizar.
-- **Opcionales**: Muestras previas de escritura del autor (para calibración de voz), tono deseado (formal, conversacional, profesional).
+- **Opcionales**: 
+  - Tono deseado (ej. Académico estricto, formal, conversacional, directo).
+  - Perfil de voz personal (ubicado en `references/perfil_voz_usuario.md` o provisto en el prompt) para igualar la cadencia y estilo exacto del autor.
 
 ## Salidas
 1. Texto humanizado (versión refinada y natural).
@@ -38,15 +40,17 @@ Elimina palabras sobreutilizadas por IA ("crucial", "tapiz", "delve", "cabe dest
 - `view_file`, `replace_file_content`, `multi_replace_file_content`, `write_to_file`.
 
 ## Procedimiento
-1. **Analizar el texto**: Identificar palabras huella de IA, ritmos monótonos y cierres vacíos.
-2. **Consultar la guía de patrones**: Revisar [patrones_ia_wikipedia.md](references/patrones_ia_wikipedia.md).
-3. **Calibrar la voz**: Extraer cadencia y preferencias si el usuario incluyó muestras de su escritura.
-4. **Reescribir sintácticamente**:
+1. **Analizar el texto**: Identificar palabras huella de IA, ritmos monótonos, calcos sintácticos (ej. abuso del gerundio o voz pasiva antinatural en español) y cierres mecánicos.
+2. **Consultar referencias**: Revisar [patrones_ia_wikipedia.md](references/patrones_ia_wikipedia.md) y [perfil_voz_usuario.md](references/perfil_voz_usuario.md) (si existe) para alinear la voz.
+3. **Aplicar Tono Seleccionado**: Ajustar la formalidad y complejidad léxica según el tono solicitado (por defecto: Académico para papers).
+4. **Reescribir y Refinar**:
    - Romper listas forzadas de tres elementos.
    - Sustituir muletillas ("cabe destacar", "desempeña un papel fundamental", "sin problemas") por formulaciones directas.
-   - Alternar oraciones cortas con oraciones explicativas compuestas.
+   - Alternar oraciones cortas con oraciones explicativas compuestas (variación de cadencia).
+   - **Filtro de Falso Entusiasmo**: Eliminar adjetivos grandilocuentes ("revolucionario", "increíble", "fascinante") reemplazándolos por descripciones objetivas y precisas, especialmente en textos científicos.
+   - **Corrección de Calcos Sintácticos**: Reestructurar oraciones para que fluyan con la sintaxis natural del idioma destino, evitando el tono de "traducción automática".
    - Eliminar el párrafo final de conclusión si solo repite la introducción.
-5. **Validar y Entregar**: Comprobar fidelidad de significado y entregar la versión refinada.
+5. **Validar y Entregar**: Comprobar fidelidad de significado, preservación estricta de jerga técnica y entregar la versión refinada.
 
 ## Árbol de decisiones
 ```text
@@ -56,11 +60,11 @@ Si el texto contiene palabras huella ("cabe destacar", "delve", "tapiz", "pivota
 Si todas las oraciones tienen una longitud similar:
     variar intencionalmente la extensión (combinar frases cortas de 5 palabras con explicaciones más amplias).
 
-Si el usuario incluyó una muestra de su propia escritura:
-    analizar su ritmo y vocabulario para reflejar sus patrones reales en el texto final.
+Si el usuario definió un `perfil_voz_usuario.md` o incluyó una muestra de escritura:
+    analizar su ritmo, uso de conectores y vocabulario para reflejar sus patrones reales en el texto final, acercándose al 95% de naturalidad.
 
-Si el texto es técnico o científico:
-    preservar la precisión de los términos especializados y evitar sustituciones imprecisas.
+Si el texto es un paper científico o técnico:
+    preservar absolutamente la precisión de los términos especializados, mantener una estructura argumental robusta y aplicar un tono rigurosamente objetivo (cero falso entusiasmo).
 ```
 
 ## Validaciones
@@ -81,6 +85,7 @@ Si el texto es técnico o científico:
 
 ## Uso de referencias
 - Consultar [patrones_ia_wikipedia.md](references/patrones_ia_wikipedia.md) para la lista de clichés y estructuras a eliminar.
+- Consultar [perfil_voz_usuario.md](references/perfil_voz_usuario.md) (si existe) para adoptar el estilo de escritura único del usuario.
 
 ## Ejemplos
 - **Activación positiva**: "Humaniza este artículo de blog que suena demasiado robótico y lleno de clichés de IA."
