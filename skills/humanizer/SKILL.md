@@ -42,15 +42,14 @@ Elimina palabras sobreutilizadas por IA ("crucial", "tapiz", "delve", "cabe dest
 ## Procedimiento
 1. **Analizar el texto**: Identificar palabras huella de IA, ritmos monótonos, calcos sintácticos (ej. abuso del gerundio o voz pasiva antinatural en español) y cierres mecánicos.
 2. **Consultar referencias**: Revisar [patrones_ia_wikipedia.md](references/patrones_ia_wikipedia.md) y [perfil_voz_usuario.md](references/perfil_voz_usuario.md) (si existe) para alinear la voz.
-3. **Aplicar Tono Seleccionado**: Ajustar la formalidad según lo solicitado, pero **evitando la perfección académica**. El texto excesivamente pulido es marcado como 99% IA por GPTZero.
-4. **Reescribir y Refinar (Estrategia Anti-GPTZero)**:
-   - **Burstiness (Ráfagas)**: Variar *extremadamente* la longitud de las oraciones. Combina frases cortantes de 3-5 palabras con oraciones de 40 palabras.
-   - **Perplexity (Impredecibilidad)**: Evita conectores perfectos ("En consecuencia", "No obstante", "Si bien"). Usa transiciones más asimétricas o directas. No uses vocabulario excesivamente sofisticado si no es jerga técnica estricta.
+3. **Aplicar Tono (Anti-Detectores)**: El secreto para romper GPTZero y Copyleaks no es escribir de forma "sofisticada", sino de forma **simple y lineal**. La IA por defecto escribe con oraciones subordinadas perfectas. Para evadir la detección, desactiva el estilo literario y usa un tono directo, básico y ligeramente fragmentado.
+4. **Reescribir y Refinar (Estrategia de Simplicidad Extrema)**:
+   - **Oraciones Lineales**: Evita a toda costa las oraciones compuestas largas y subordinadas. Usa oraciones declarativas simples y separadas por punto seguido.
+   - **Conectores Básicos**: En lugar de "En consecuencia", "No obstante" o "Si bien", usa conectores más terrenales como "Pero", "Por esto", "Además de esto", o simplemente inicia la oración sin conector.
    - Romper listas forzadas de tres elementos.
-   - Sustituir muletillas de IA ("cabe destacar", "apalancar", "dinámica", "es vital", "contexto") por formulaciones más llanas y humanas.
-   - **Filtro de Falso Entusiasmo**: Eliminar adjetivos grandilocuentes.
+   - Sustituir muletillas de IA ("cabe destacar", "apalancar", "dinámica", "es vital", "contexto") por formulaciones más llanas y lógicas.
+   - **Filtro de Falso Entusiasmo**: Eliminar adjetivos grandilocuentes ("revolucionario", "increíble", "fascinante"). Mantener un tono estrictamente objetivo.
    - Alternar oraciones cortas con oraciones explicativas compuestas (variación de cadencia).
-   - **Filtro de Falso Entusiasmo**: Eliminar adjetivos grandilocuentes ("revolucionario", "increíble", "fascinante") reemplazándolos por descripciones objetivas y precisas, especialmente en textos científicos.
    - **Corrección de Calcos Sintácticos**: Reestructurar oraciones para que fluyan con la sintaxis natural del idioma destino, evitando el tono de "traducción automática".
    - Eliminar el párrafo final de conclusión si solo repite la introducción.
 5. **Validar y Entregar**: Comprobar fidelidad de significado, preservación estricta de jerga técnica y entregar la versión refinada.
