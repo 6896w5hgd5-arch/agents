@@ -42,10 +42,13 @@ Elimina palabras sobreutilizadas por IA ("crucial", "tapiz", "delve", "cabe dest
 ## Procedimiento
 1. **Analizar el texto**: Identificar palabras huella de IA, ritmos monótonos, calcos sintácticos (ej. abuso del gerundio o voz pasiva antinatural en español) y cierres mecánicos.
 2. **Consultar referencias**: Revisar [patrones_ia_wikipedia.md](references/patrones_ia_wikipedia.md) y [perfil_voz_usuario.md](references/perfil_voz_usuario.md) (si existe) para alinear la voz.
-3. **Aplicar Tono Seleccionado**: Ajustar la formalidad y complejidad léxica según el tono solicitado (por defecto: Académico para papers).
-4. **Reescribir y Refinar**:
+3. **Aplicar Tono Seleccionado**: Ajustar la formalidad según lo solicitado, pero **evitando la perfección académica**. El texto excesivamente pulido es marcado como 99% IA por GPTZero.
+4. **Reescribir y Refinar (Estrategia Anti-GPTZero)**:
+   - **Burstiness (Ráfagas)**: Variar *extremadamente* la longitud de las oraciones. Combina frases cortantes de 3-5 palabras con oraciones de 40 palabras.
+   - **Perplexity (Impredecibilidad)**: Evita conectores perfectos ("En consecuencia", "No obstante", "Si bien"). Usa transiciones más asimétricas o directas. No uses vocabulario excesivamente sofisticado si no es jerga técnica estricta.
    - Romper listas forzadas de tres elementos.
-   - Sustituir muletillas ("cabe destacar", "desempeña un papel fundamental", "sin problemas") por formulaciones directas.
+   - Sustituir muletillas de IA ("cabe destacar", "apalancar", "dinámica", "es vital", "contexto") por formulaciones más llanas y humanas.
+   - **Filtro de Falso Entusiasmo**: Eliminar adjetivos grandilocuentes.
    - Alternar oraciones cortas con oraciones explicativas compuestas (variación de cadencia).
    - **Filtro de Falso Entusiasmo**: Eliminar adjetivos grandilocuentes ("revolucionario", "increíble", "fascinante") reemplazándolos por descripciones objetivas y precisas, especialmente en textos científicos.
    - **Corrección de Calcos Sintácticos**: Reestructurar oraciones para que fluyan con la sintaxis natural del idioma destino, evitando el tono de "traducción automática".
